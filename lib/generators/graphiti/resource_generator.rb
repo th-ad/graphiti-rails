@@ -117,7 +117,7 @@ module Graphiti
     end
 
     def generate_controller
-      to = File.join("app/controllers", class_path, "#{file_name.pluralize}_controller.rb")
+      to = File.join("app/controllers", ApplicationResource.endpoint_namespace, class_path, "#{file_name.pluralize}_controller.rb")
       template("controller.rb.erb", to)
     end
 
